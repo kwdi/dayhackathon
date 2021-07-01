@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +10,96 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap');
+
+* {
+  box-sizing: border-box;
+  
+}
+
+body{
+  /* padding-top: 3%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3%; */
+  /* font-family: 'Indie Flower', cursive; */
+  font-family: 'Lobster', cursive;
+  background-color: #9e9e9e;
+}
+
+main{
+  display: flex;
+	flex-direction: column;
+}
+
+.card{
+  padding-top: 2%;
+  margin-top: 2%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+  border-radius: 20px 20px 20px 20px;
+  display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+  box-shadow: 
+  rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+  rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+  rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  word-wrap: break-word;
+
+}
+
+.card--register{
+  background-color: #00bcd4;
+  font-family: 'Lobster', cursive;
+  order: 1;
+}
+
+.card--send{
+  background-color: #b2dfdb;
+  order: 2;
+}
+
+.card--pending{
+  background-color: #8bc34a;
+  order: 3;
+}
+
+.card--mail{
+  background-color: #ff5722;
+  order: 3;
+}
+
+.card--done{
+  background-color: #d8c957;
+  color: rgb(121, 123, 121);
+  order: 4;
+}
+
+.card__btn {
+  display: inline-block;
+  min-width: 100%;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.card__input{
+  text-align: center;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 2%;
+}
+
+.card__register-title{
+  margin: auto;
+  text-align: center;
+}
+
+.card__strikethrough{
+  text-decoration: line-through;
 }

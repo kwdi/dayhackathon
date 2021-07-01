@@ -22,16 +22,34 @@ app.get('/api/hello', (req, res) => {
   res.send({ express: 'Hello From Express' });
 });
 
+// app.post('/api/login', (req, res) => { 
+//   console.log("hello from login")
+//   console.log(req.body)
+//   const name = req.body.name;
+//   const pass = req.body.pass;
+//   if(usersDB.hasOwnProperty(name) && usersDB[`${name}`].pass === pass){
+//     return res.json({ success: `hello ${name}`});
+//   }
+//   return res.json({ error: "Wrong user or password"});
+// });
+
 app.post('/api/adduser', (req, res) => {
-  if(!usersDB.hasOwnProperty(req.body.name)){
-    usersDB[`${req.body.name}`]= {pass: req.body.pass}
-    usersMsg[`${req.body.name}`] = [];
-    return res.json({ success: `hello ${req.body.name}`});
+  console.log("hello from adduser")
+  const name = req.body.name;
+  const pass = req.body.pass;
+  if(!usersDB.hasOwnProperty(name)){
+    usersDB[`${name}`]= {pass: pass}
+    usersMsg[`${name}`] = [];
+    return res.json({ success: `hello ${name}`});
   }
-  return res.json({ error: "error user exists"});
+  if(usersDB.hasOwnProperty(name) && usersDB[`${name}`].pass === pass){
+    return res.json({ success: `hello ${name}`});
+  }
+  return res.json({ error: "error wrong pass"});
 });
 
 app.get('/api/readmail', (req, res) => {
+  console.log("hello from readmail")
   const name = req.headers.name;
   const pass = req.headers.pass;
   if(usersDB.hasOwnProperty(name) && usersDB[`${name}`].pass === pass){
@@ -41,6 +59,7 @@ app.get('/api/readmail', (req, res) => {
 })
 
 app.post('/api/sendmail', (req, res) => {
+  console.log("hello from sendmail")
   const name = req.headers.name;
   const pass = req.headers.pass;
   const receiver = req.body.receiver;
