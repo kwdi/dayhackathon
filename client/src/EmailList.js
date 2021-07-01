@@ -3,7 +3,7 @@ import Mail from './Mail'
 
 const EmailList = ({ emailList }) => (
     <>
-      {emailList.map((mail, index) => (
+      {emailList.slice(0).reverse().map((mail, index) => (
         <Mail key={index} mail={mail}/>
       ))}
     </>
