@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './App.css';
 import Login from './Login';
 import Logout from './Logout';
@@ -34,7 +34,7 @@ const getEmails = async (name, pass) => {
         method: 'GET',
         headers: {
           name: name,
-          pass, pass,
+          pass: pass,
         },
       });
       const body = await response.json();
@@ -49,7 +49,7 @@ const sendEmail = async (receiver, msg) => {
         headers: {
           'Content-Type': 'application/json',
           name: name,
-          pass, pass,
+          pass: pass,
         },
         body: JSON.stringify({ receiver, msg }),
       });

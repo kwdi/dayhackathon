@@ -13,6 +13,7 @@ code {
 } */
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
   box-sizing: border-box;
@@ -26,7 +27,11 @@ body{
   padding-bottom: 3%; */
   /* font-family: 'Indie Flower', cursive; */
   font-family: 'Lobster', cursive;
-  background-color: #9e9e9e;
+  /* background-color: #9e9e9e; */
+  background: #12c2e9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 main{
@@ -36,12 +41,12 @@ main{
 
 .card{
   padding-top: 2%;
-  margin-top: 2%;
+  /* margin-top: 2%; */
   width: 100%;
   padding-left: 5%;
   padding-right: 5%;
   padding-bottom: 2%;
-  border-radius: 20px 20px 20px 20px;
+  /* border-radius: 20px 20px 20px 20px; */
   display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -60,33 +65,96 @@ main{
 }
 
 .card--send{
-  background-color: #b2dfdb;
+  text-align: left;
+  background-color: #039be5;
   order: 2;
 }
 
-.card--pending{
-  background-color: #8bc34a;
+.card--logout{
+  background-color: #0277bd;
   order: 3;
 }
 
 .card--mail{
-  background-color: #ff5722;
+  text-align: left;
+  margin-top: 2%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  padding-left: 4%;
+  padding-right: 4%;
+  font-family: 'Roboto', sans-serif;
+  /* background-color: #ff5722; */
+  background-color: #fa7851;
   order: 3;
+  box-shadow: 
+  rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+  rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+  rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
-.card--done{
-  background-color: #d8c957;
+.card--fetch{
+  background-color: #81d4fa;
   color: rgb(121, 123, 121);
   order: 4;
 }
 
 .card__btn {
   display: inline-block;
-  min-width: 100%;
-  border-radius: 20px 20px 20px 20px;
+  /* min-width: 100%; */
+  /* border-radius: 20px 20px 20px 20px; */
   cursor: pointer;
-  margin: auto;
+  /* margin: auto; */
   box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+.card__btn--logout{
+  border-radius: 20px 20px 20px 20px;
+  background-color: #f0b087; /* Green */
+  border: none;
+  /* border-color: #f0b087; */
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.card-username{
+  font-size: x-large;
+  margin-right: auto;
+}
+
+.card__btn--fetch{
+  border-radius: 20px 20px 20px 20px;
+  /* background-color: #e0f2f1; Green */
+  background-color: #e0f2f1;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.card__btn--send{
+  border-radius: 20px 20px 20px 20px;
+  /* background-color: #e0f2f1; Green */
+  background-color: #e0f2f1;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: auto;
 }
 
 .card__input{
@@ -95,6 +163,25 @@ main{
   margin-bottom: 2%;
 }
 
+.card__input--sendName{
+  padding: 12px;
+  width: 80%;
+  border: 1px solid #ccc;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.card__input--sendMsg{
+  padding: 12px;
+  width: 80%;
+  border: 1px solid #ccc;
+  text-align: left;
+  margin-bottom: 2%;
+}
+
+.card--subtitle{
+  font-size: x-large;
+}
 .card__register-title{
   margin: auto;
   text-align: center;

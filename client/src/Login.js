@@ -21,12 +21,12 @@ const AddCard = ({ getLogin }) => {
         <h1 className='card__register-title'>Login / Create User</h1>
         <label>Name</label>
         <input className='card__input' type="text" id="title"
-        placeholder='Add title'
+        placeholder='UserName'
         value={name}
         onChange={e => setName(e.target.value)}></input>
         <label>Password</label>
         <input className='card__input' type="text" id="description"
-        placeholder='Add Description'
+        placeholder='Password'
         value={pass}
         onChange={e => setPass(e.target.value)}></input>
         <input type="submit" className="card__btn" value="Login"></input>

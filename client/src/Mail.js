@@ -3,9 +3,9 @@ import React from 'react';
 
 const Mail = ({ mail }) => (
   <article className='card--mail' >
-  <h2>{mail.from}</h2>
-  <h3>{mail.msg}</h3>
-  <h3>{mail.date}</h3>
+  <h2>Sender: {mail.from}</h2>
+  <p><u>Message:</u> <br></br> {mail.msg}</p>
+  <h4>Date: {mail.date}</h4>
   </article>
 )
 
