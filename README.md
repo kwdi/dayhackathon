@@ -4,8 +4,11 @@
 
 - Written in React and Node.js using express
 
-#### Log in Page / User Logged in
-![Main view](/assets/main.png "Main View") ![Logged in view](/assets/logged.png "Logged in view")
+#### Log in Page
+![Main view](/assets/log.png "Main View") 
+
+#### User Logged in
+![Logged in view](/assets/mail.png "Logged in view")
 
 #### Features implemented
 
