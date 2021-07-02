@@ -6,14 +6,13 @@ const AddCard = ({ getLogin }) => {
   const onSubmit = e => {
     e.preventDefault();
     if (!name || !pass) {
-      alert('Please add a Name and Pass')
+      alert('Please add a Name and Pass');
       return;
     }
     getLogin({ name, pass });
 
     setName('');
     setPass('');
-    return false;
   };
 
   return (

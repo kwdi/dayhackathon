@@ -1,5 +1,5 @@
 import React from 'react';
-import Mail from './Mail'
+import Mail from './Mail';
 
 const EmailList = ({ emailList }) => (
     <>
